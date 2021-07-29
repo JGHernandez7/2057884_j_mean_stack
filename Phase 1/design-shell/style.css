@@ -1,0 +1,64 @@
+.header {
+    padding: 42px;
+    text-align: center;
+    background: khaki;
+}
+
+.body {
+    padding: 35px;
+    text-align: left;
+    background: dimgray;
+}
+
+.footer {
+    padding: 25px;
+    text-align: center;
+    background: slategrey;
+}
+
+h1 {
+    color: maroon;
+    font-size: 190px;
+    font-family: fantasy;
+}
+h2 {
+    color: saddlebrown;
+    font-size: 140px;
+    font-family: monospace;
+}
+h3 {
+    color: darkgoldenrod;
+    font-size: 100px;
+    font-family: sans-serif;
+}
+h4 {
+    color: darkgreen;
+    font-size: 70px;
+    font-family: Helvetica;
+}
+h5 {
+    color: rebeccapurple;
+    font-size: 50px;
+    font-family: inherit;
+}
+h6 {
+    color: darkmagenta;
+    font-size: 40px;
+    font-family: Georgia;
+}
+
+p {
+    background: indigo;
+    color: snow;
+    font-size: 35px;
+    font-family: Geneva;
+    text-indent: 5px;
+}
+
+div{
+    border-style: ridge;
+    border-color: darkslategray;
+    padding: 20px;
+    background: silver;
+    margin-top: 10px;
+}
