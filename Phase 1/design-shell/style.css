@@ -1,5 +1,6 @@
 .header {
     padding: 42px;
+    height: 500px;
     text-align: center;
     background: khaki;
 }
@@ -18,6 +19,7 @@
 
 h1 {
     color: maroon;
+    text-transform: uppercase;
     font-size: 190px;
     font-family: fantasy;
 }
@@ -42,7 +44,9 @@ h5 {
     font-family: inherit;
 }
 h6 {
+    text-align: right;
     color: darkmagenta;
+    background: yellow;
     font-size: 40px;
     font-family: Georgia;
 }
@@ -58,7 +62,7 @@ p {
 div{
     border-style: ridge;
     border-color: darkslategray;
-    padding: 20px;
+    padding: 25px;
     background: silver;
     margin-top: 10px;
 }
