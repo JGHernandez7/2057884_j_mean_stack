@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Managers Page</title>
+    <script src="operation.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Add New Budget</h1>
+        <form>
+            Client Name: <input type="text" id="clientName"/><br>
+            Project Name: <input type="text" id="projectName"/><br>
+            Budget: <input type="number" id="budgetAmount"/><br>
+            <input type="button" value="Add" onclick="storeData()"/>
+            <button onclick="document.getElementById('clientName').value = ''
+                             document.getElementById('projectName').value = ''
+                             document.getElementById('budgetAmount').value = ''"
+            >Clear</button>
+        </form>
+        <a href="main-page.html">Back</a>
+    </div>
+</body>
+</html>
