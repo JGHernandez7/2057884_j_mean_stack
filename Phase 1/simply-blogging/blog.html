@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Blogging</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="operation.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simply Blogging</h1>
+        <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Add Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contacts</a>
+                    </li>
+                </ul>
+        </nav>
+
+        <form id="postForm" class="form-group">
+            <div class="row">
+                <div class="col"><label>Title: </label></div>
+                <div class="col"><input type="text" name="title" id="title" class="form-control" placeholder="Type here" required></div>
+            </div>
+            <div class="row">
+                <div class="col"><label>Articles: </label></div>
+                <div class="col"><textarea class="form-control" id="articles" rows="7" style="word-wrap: break-word;" placeholder="Type here" required></textarea></div>
+            </div>
+            <div class="row">
+                <div class="col"><label>Image URL: </label></div>
+                <div class="col"><input type="text" id="image" class="form-control" placeholder="Type here"required></div>
+            </div>
+            <div class="row">
+                <div class='col'><input type="button" class="btn btn-primary" value="Add Blog" onclick="addBlog()"></div>
+            </div>
+        </form>
+        
+            <h2 class="nav justify-content-center">Blogs</h2>
+            <p id="blog"></p>
+    </div>
+</body>
+</html>
