@@ -1,0 +1,70 @@
+<div *ngIf="loginFlag">
+  <h2>Login</h2><hr>
+  <form #loginRef="ngForm" (ngSubmit)="login(loginRef)">
+    <div>
+    Username: <input type="text" name="userName" id="userName" ngModel required>
+    </div>
+    <div>
+      Password: <input type="password" name="password" id="password" ngModel required>
+    </div><hr>
+    <div>
+      <button type="submit">Login</button>
+      <button (click)="hide('1')">Register</button>
+    </div><hr>
+    <div class="error">
+      <h3>{{msg}}</h3>
+    </div>
+  </form>
+</div>
+
+<div *ngIf = "registerFlag">
+  <h2>Registration</h2><hr>
+  <form #registerRef="ngForm" (ngSubmit)="register(registerRef)">
+    <div>
+      First Name: <input type="text" name="firstName" id="firstName" ngModel required>
+    </div>
+    <div>
+      Last Name: <input type="text" name="lastName" id="lastName" ngModel required>
+    </div>
+    <div>
+      Username: <input type="text" name="userName" id="userName" ngModel required>
+    </div>
+    <div>
+      Password: <input type="password" name="password" id="password" ngModel required>
+    </div><hr>
+    <div>
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+      <button (click)="hide('2')">Login</button>
+    </div><hr>
+  </form>
+</div>
+
+<div *ngIf="portfolioFlag">
+  <h2>My Portfolio</h2><hr>
+  <h3>Welcome {{userName}}</h3><hr>
+  <form #portfolioRef="ngForm" (ngSubmit)="store(portfolioRef)">
+    <div>
+      Contact Name: <input type="text" name="contactName" id="contactName" ngModel required>
+    </div>
+    <div>
+      Contact Phone: <input type="text" name="contactPhone" id="contactPhone" ngModel required>
+    </div><hr>
+    <div>
+      <button type="submit">Store</button>
+    </div><hr>
+  </form>
+
+  <div>
+    <table border="1">
+      <tr>
+        <th>Contact Name</th>
+        <th>Contact Phone</th>
+      </tr>
+      <tr *ngFor="let i of contactArray">
+        <td>{{i.name}}</td>
+        <td>{{i.number}}</td>
+      </tr>
+    </table>
+  </div><hr>
+</div>
