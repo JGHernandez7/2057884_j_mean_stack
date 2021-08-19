@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1",
+        "question": "Which is the largest state in the USA?",
+        "choice1": "Texas",
+        "choice2": "Alaska",
+        "choice3": "California",
+        "choice4": "Montana",
+        "answer": "Alaska",
+        "result":""
+    },
+    {
+        "id": "2",
+        "question": "Which is the youngest state in the USA?",
+        "choice1": "New Mexico",
+        "choice2": "Puerto Rico",
+        "choice3": "Alaska",
+        "choice4": "Hawaii",
+        "answer": "Hawaii",
+        "result":""
+    },
+    {
+        "id": "3",
+        "question": "Which is the most diverse state in the USA?",
+        "choice1": "Florida",
+        "choice2": "New York",
+        "choice3": "Ohio",
+        "choice4": "California",
+        "answer": "California",
+        "result":""
+    },
+    {
+        "id": "4",
+        "question": "Which is the least populated state in the USA?",
+        "choice1": "Wyoming",
+        "choice2": "Colorado",
+        "choice3": "Alabama",
+        "choice4": "Arizona",
+        "answer": "Wyoming",
+        "result":""
+    },
+    {
+        "id": "5",
+        "question": "Which is the smallest state in the USA?",
+        "choice1": "Connecticut",
+        "choice2": "Rhode Island",
+        "choice3": "Hawaii",
+        "choice4": "Mississippi",
+        "answer": "Rhode Island",
+        "result":""
+    },
+    {
+        "id": "6",
+        "question": "Which state has the largest volcano in the USA?",
+        "choice1": "Virginia",
+        "choice2": "Oregon",
+        "choice3": "Michigan",
+        "choice4": "Wyoming",
+        "answer": "Wyoming",
+        "result":""
+    },
+    {
+        "id": "7",
+        "question": "Which state has the most amount of islands in the USA?",
+        "choice1": "Alaska",
+        "choice2": "Texas",
+        "choice3": "New York",
+        "choice4": "Hawaii",
+        "answer": "Alaska",
+        "result":""
+    },
+    {
+        "id": "8",
+        "question": "Which state was the first to join the USA?",
+        "choice1": "Iowa",
+        "choice2": "Washington",
+        "choice3": "Maine",
+        "choice4": "Nebraska",
+        "answer": "Maine",
+        "result":""
+    },
+    {
+        "id": "9",
+        "question": "Which state was the first to secede from the USA?",
+        "choice1": "South Carolina",
+        "choice2": "Georgia",
+        "choice3": "Utah",
+        "choice4": "Delaware",
+        "answer": "South Carolina",
+        "result":""
+    },
+    {
+        "id": "10",
+        "question": "Which state was the first to grant women suffrage in the USA?",
+        "choice1": "Vermont",
+        "choice2": "Nevada",
+        "choice3": "North Dakota",
+        "choice4": "Wyoming",
+        "answer": "Wyoming",
+        "result":""
+    }
+]

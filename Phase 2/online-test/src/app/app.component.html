@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Online Test</h1>
+    <form [formGroup]="onlineTest" (ngSubmit)="evaluate()">
+      <div class="row">
+        <div class="col" *ngFor="let i of list">
+          <br>
+          <h3>{{i.id}}. {{i.question}}</h3>
+    
+          <div class="choice">
+            <input type="radio" id = "radio1" value={{i.choice1}} formControlName={{i.question}}>
+            <label for="radio1">{{i.choice1}}</label><br/>
+          </div>
+          <div class="choice">
+            <input type="radio" id = "radio2" value={{i.choice2}} formControlName={{i.question}}>
+            <label for="radio2">{{i.choice2}}</label><br/>
+          </div>
+          <div class="choice">
+            <input type="radio" id = "radio3" value={{i.choice3}} formControlName={{i.question}}>
+            <label for="radio3">{{i.choice3}}</label><br/>
+          </div>
+          <div class="choice">
+            <input type="radio" id = "radio4" value={{i.choice4}} formControlName={{i.question}}>
+            <label for="radio4">{{i.choice4}}</label><br/>
+          </div>
+          <br>
+          <div class="result">
+            <h4 *ngIf="i.result == 'Correct!'&& final" class="pass">{{i.result}}</h4>
+            <h4 *ngIf="i.result != 'Correct!'&& final" class="fail">{{i.result}}</h4>
+            <h4 *ngIf="i.result != 'Correct!'&& final" class="pass">Correct Answer: {{i.answer}}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="overview">
+        <h2 *ngIf="grade && final" class="pass">Score: {{correct}}/10! You Passed!</h2>
+        <h2 *ngIf="!grade && final" class="fail">Score: {{correct}}/10! You Failed!</h2>
+        <button mat-stroked-button class="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
