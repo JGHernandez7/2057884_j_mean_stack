@@ -1,0 +1,52 @@
+<div>
+    <div class="container">
+        <h1>Task Tracker</h1>
+        <br><hr><br>
+        <div id="form">
+            <form #taskRef="ngForm" (ngSubmit)="storeTask(taskRef)">
+                <mat-form-field>
+                    <mat-label>ID</mat-label>
+                    <input type="number" matInput name="id" ngModel required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input type="text" matInput name="name" ngModel required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Task</mat-label>
+                    <input type="text" matInput name="task" ngModel required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Deadline</mat-label>
+                    <input type="date" matInput name="deadline" ngModel required>
+                </mat-form-field>
+                <br>
+                <div id="buttons">
+                    <button type="submit" mat-raised-button color="primary">Submit</button>
+                <button type="reset" mat-raised-button color="warn">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div id="table">
+            <h2>To-Do-List</h2>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Task</th>
+                    <th>Deadline</th>
+                </tr>
+                <tr *ngFor="let i of tasksArray">
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.taskName}}</td>
+                    <td>{{i.deadline}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="area"></div>
+    </div>
+</div>
