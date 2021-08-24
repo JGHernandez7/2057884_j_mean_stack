@@ -7,6 +7,7 @@ let records;
 let entryResult;
 
 do{
+    debugger;
     try
     {
         input = fs.readFileSync("log-records.json");
@@ -21,6 +22,8 @@ do{
         records = [newEntry()];
         entryResult = JSON.stringify(records);
     }
+
+    debugger;
 
     fs.writeFileSync("log-records.json",entryResult);
     console.log("Entry stored!");
@@ -39,6 +42,8 @@ do{
         let date = (today.getMonth() + 1) + "/" + today.getDate() + "/" + today.getFullYear();
         let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         
+        debugger;
+
         let entry = {
                         firstName:firstName,
                         lastName:lastName,
@@ -50,4 +55,5 @@ do{
 
         return entry;
     }
+    debugger;
 }while(buffer != "x");
