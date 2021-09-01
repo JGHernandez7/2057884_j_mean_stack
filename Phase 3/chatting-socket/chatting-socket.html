@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatting with Socket IO</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+        var socket = io();
+        let serverReply = ["Ok!","Goodbye!","Hello there!","Farewell!","Please stand by!","Hold on just a second!","Another time perhaps!"];
+
+        socket.on("obj1",(msg)=> {
+            console.log(msg);
+        });
+
+        function sendMsg()
+        {
+            let userName = document.getElementById("userName").value;
+            let userMsg = document.getElementById("userMsg").value;
+            let randomIndex = Math.floor(Math.random()*serverReply.length);
+            let result = serverReply[randomIndex];
+            let today = new Date();
+
+            if (userName == ""){
+                userName = "JohnDoe123";
+            }
+
+            if (userMsg == ""){
+                userMsg = "Hi!";
+            }
+
+            socket.emit("obj", "(" + today.toLocaleTimeString() + ") Hello " + userName + "!");
+            socket.emit("obj", "(" + today.toLocaleTimeString() + ") " + userName + " message: " + userMsg);
+            document.getElementById("conversation").innerHTML += "<div><b>(" + today.toLocaleTimeString() + ")</b> Server Message: " + result + "</div><br>";
+
+            socket.emit("obj", "(" + today.toLocaleTimeString() + ") Server message: " + result);
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <div>
+            Username: <input type="text" id="userName">
+        </div>
+        <br>
+        <div id="resetMsg">
+            Message: <textarea id="userMsg" rows="7" cols="21"></textarea>
+        </div>
+        </br>
+        <input type="button" value="Send Message" onclick="sendMsg()">
+        <input type="reset" value="Reset">
+    </form>
+    <hr>
+    <br>
+    <div id="conversation"></div>
+</body>
+</html>
